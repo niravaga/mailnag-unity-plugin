@@ -65,6 +65,11 @@ def main():
 			start_subprocess(mail_client)
 	elif arg == '--check':
 		check_for_mails()
+	else:
+		mail_client = get_default_mail_reader()
+		if mail_client != None:
+			start_subprocess(mail_client)
+	
 
 
 if __name__ == "__main__": main()
